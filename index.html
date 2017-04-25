@@ -16,9 +16,31 @@
 	<p id="mostrarMail"></p>
 
 	<script>
-		function myFunction() {
-			
+		var usuarios = [];
+		var nombre = document.getElementById('name');
+		var mail = document.getElementById('email');
+		//var mostrarNombre = document.getElementById('mostrarNombre');
+		//var mostrarMail = document.getElementById('mostrarMail');
+
+		function Usuario(nombre,mail){
+			this.nombre = nombre;
+			this.mail = mail;
+		};
+
+
+		function nuevoUsuario(){
+			var usuarioname = document.getElementById('name').value;
+			var usuarioemail = document.getElementById('email').value;
+			var usuario  = new Usuario(usuarioname,usuarioemail);
+			usuarios.push(usuario);
+			//printHTML(usuario.toHTML());
 		}
+
+		function myFunction(nombre,mail) {
+			console.log(mostrarNombre.innerHTML = ("Nombre : " + this.nombre));
+			console.log(mostrarMail.innerHTML = ("Correo : " + this.mail));
+		}
+
 	</script>
 </body>
 </html>
